@@ -4,7 +4,7 @@ import Link from '../models/linkModel.js';
 const formatLink = (link) => {
   return {
     type: link.type,
-    [`${link.type}_uri`]: link.url
+    [`${link.type}_url`]: link.url
   };
 };
 
@@ -90,7 +90,7 @@ export const bulkUpsertLinks = async (req, res) => {
         }
       );
 
-      result[`${link.type}_uri`] = link.url;
+      result[`${link.type}_url`] = link.url;
     }
 
     return res.status(200).json({
@@ -117,7 +117,7 @@ export const getLinks = async (req, res) => {
     const formattedLinks = {};
 
     links.forEach(link => {
-      formattedLinks[`${link.type}_uri`] = link.url;
+      formattedLinks[`${link.type}_url`] = link.url;
     });
 
     return res.status(200).json({

@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/admin-panel');
+mongoose.connect('mongodb://127.0.0.1:27017/link-admin-panel');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/link', linkRoutes);

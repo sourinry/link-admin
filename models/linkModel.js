@@ -1,12 +1,17 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const linkSchema = new mongoose.Schema({
   type: {
     type: String,
     enum: ['whatsapp', 'download', 'getLink'],
-    required: true
+    required: true,
+    unique: true   
   },
-  url: String
+  url: {
+    type: String,
+    required: true
+  }
 }, { timestamps: true });
 
-export default mongoose.model('Link', linkSchema);
+const Link = mongoose.model("Link", linkSchema);
+export default Link;

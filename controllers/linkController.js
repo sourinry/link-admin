@@ -22,7 +22,7 @@ export const upsertLink = async (req, res) => {
       });
     }
 
-    const allowedTypes = ['whatsapp', 'download', 'getLink'];
+    const allowedTypes = ['whatsapp', 'whatsapp2', 'whatsapp3', 'download', 'getLink'];
     if (!allowedTypes.includes(type)) {
       return res.status(400).json({
         status: false,
@@ -69,7 +69,7 @@ export const bulkUpsertLinks = async (req, res) => {
       });
     }
 
-    const allowedTypes = ['whatsapp', 'download', 'getLink'];
+    const allowedTypes = ['whatsapp', 'whatsapp2', 'whatsapp3', 'download', 'getLink'];
 
     const result = {};
 

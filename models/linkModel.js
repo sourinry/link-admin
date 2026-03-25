@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const linkSchema = new mongoose.Schema({
   type: {
     type: String,
-    enum: ['whatsapp', 'download', 'getLink'],
+    enum: ['whatsapp', 'whatsapp2', 'whatsapp3','download', 'getLink'],
     required: true,
     unique: true   
   },

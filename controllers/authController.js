@@ -114,3 +114,19 @@ export const login = async (req, res) => {
     });
   }
 };
+
+
+//====================== LOGOUT =====================
+export const logout = async (req,res) => {
+  try {
+    return res.status(200).json({
+      status: true,
+      message: `user log out successfully`
+    });
+  } catch (error) {
+    return res.status(500).json({
+      status: false,
+      message: `internal server error`
+    });
+  }
+}

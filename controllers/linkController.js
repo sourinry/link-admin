@@ -117,7 +117,7 @@ export const getLinks = async (req, res) => {
     const formattedLinks = {};
 
     links.forEach(link => {
-      formattedLinks[`${link.type}_urlc`] = link.url;
+      formattedLinks[`${link.type}_url`] = link.url;
     });
 
     return res.status(200).json({

@@ -3,9 +3,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import authRoutes from './routes/authRoutes.js';
 import linkRoutes from './routes/linkRoutes.js';
+import cors from "cors"
 
 const app = express();
-
+app.use(cors({
+  origin : "http://localhost:4200"
+}))
 app.use(express.json());
 
 mongoose.connect('mongodb://127.0.0.1:27017/link-admin-panel');

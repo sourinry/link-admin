@@ -6,9 +6,7 @@ import { connectDB } from './config/db.js';
 import cors from "cors"
 
 const app = express();
-app.use(cors({
-  origin : "http://localhost:4200"
-}))
+app.use(cors(process.env.ORIGIN))
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
